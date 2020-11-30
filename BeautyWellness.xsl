@@ -53,7 +53,7 @@
                     <p>
                         <input type="button" name="btnCalcBill" value="Calculate Bill" id="calcBill" />
                 Total: €
-                <input type="text" name="txtBillAmt" /><input type="checkbox" name="cbOpts" value="isMale" id="showMale" /><label for="showMale">Highlight available for Male</label></p>
+                <input type="text" name="txtBillAmt" /><input type="checkbox" name="cbOpts" value="isMale" id="showMale" /><label for="showMale">Highlight available for Male Treatment</label></p>
                 </form>
             </body>
         </html>
