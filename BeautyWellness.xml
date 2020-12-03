@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="BeautyWellness.xsl"?>
 <salonmenu>
   <section name="Facial Treatments">
     <entree male="true">
@@ -84,4 +85,5 @@
       <price>40.00</price>
     </entree>
   </section>
+  
 </salonmenu>
