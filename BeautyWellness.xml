@@ -1,89 +1,93 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?xml-stylesheet type="text/xsl" href="BeautyWellness.xsl"?>
 <salonmenu>
-  <section name="Facial Treatments">
-    <entree male="true">
-      <item>Deep Cleansing Facial</item>
-      <price>30.00</price>
-    </entree>
-    <entree male="true">
-      <item>Collagen Facial</item>
-      <price>50.00</price>
-    </entree>
-    <entree male="true">
-      <item>Oxygen Facial</item>
-      <price>65.00</price>
-    </entree>
-    <entree male="true">
-      <item>Crystal Peel Brightening Facial</item>
-      <price>78.00</price>
-    </entree>
-  </section>
-  <section name="Body Treatments">
-    <entree>
-      <item>Herbal Exfoliation Treatment</item>
-      <price>48.00</price>
-    </entree>
-    <entree>
-      <item>Relaxing Body Treatment</item>
-      <price>68.00</price>
-    </entree>
-    <entree>
-      <item>Aromatherapy Body Treatment</item>
-      <price>78.00</price>
-    </entree>
-    <entree>
-      <item>Mud Therapy Treatment</item>
-      <price>88.00</price>
-    </entree>
-    <entree>
-      <item>Sunless Tanning</item>
-      <price>98.00</price>
-    </entree>
+    
+    <section name="Facial Treatments">
+        <entree male="true">
+            <item>Deep Cleansing Facial</item>
+            <price>30.00</price>
+        </entree>
+        <entree male="true">
+            <item>Collagen Facial</item>
+            <price>50.00</price>
+        </entree>
+        <entree male="true">
+            <item>Oxygen Facial</item>
+            <price>65.00</price>
+        </entree>
+        <entree male="true">
+            <item>Crystal Peel Brightening Facial</item>
+            <price>78.00</price>
+        </entree>
     </section>
-  <section name="Body Waxing">
-    <entree>
-      <item>Underarms</item>
-      <price>10.00</price>
-    </entree>
-    <entree>
-      <item>Arms</item>
-      <price>18.00</price>
-    </entree>
-    <entree male="true">
-      <item>Full Face</item>
-      <price>25.00</price>
-    </entree>
-    <entree>
-      <item>Bikini Waxing</item>
-      <price>18.00</price>
-    </entree>
-    <entree male="true">
-      <item>Under Knee Wax</item>
-      <price>22.00</price>
-    </entree>
-    <entree>
-      <item>Full Leg</item>
-      <price>38.00</price>
-    </entree>
-  </section>
-  <section name="Other Services">
-    <entree>
-      <item>Day/Evening Makeup</item>
-      <price>20.00</price>
-    </entree>
-    <entree>
-      <item>Special Occasion Makeup</item>
-      <price>38.00</price>
-    </entree>
-    <entree>
-      <item>Non-Medical Chemical Peel</item>
-      <price>45.00</price>
-    </entree>
-    <entree>
-      <item>Back Facial</item>
-      <price>40.00</price>
-    </entree>
-  </section>
+    
+    <section name="Body Treatments">
+        <entree>
+            <item>Herbal Exfoliation Treatment</item>
+            <price>48.00</price>
+        </entree>
+        <entree>
+            <item>Relaxing Body Treatment</item>
+            <price>68.00</price>
+        </entree>
+        <entree>
+            <item>Aromatherapy Body Treatment</item>
+            <price>78.00</price>
+        </entree>
+        <entree>
+            <item>Mud Therapy Treatment</item>
+            <price>88.00</price>
+        </entree>
+        <entree>
+            <item>Sunless Tanning</item>
+            <price>98.00</price>
+        </entree>
+    </section>
+        
+    <section name="Body Waxing">
+        <entree>
+            <item>Underarms</item>
+            <price>10.00</price>
+        </entree>
+        <entree>
+            <item>Arms</item>
+            <price>18.00</price>
+        </entree>
+        <entree male="true">
+            <item>Full Face</item>
+            <price>25.00</price>
+        </entree>
+        <entree>
+            <item>Bikini Waxing</item>
+            <price>18.00</price>
+        </entree>
+        <entree male="true">
+            <item>Under Knee Wax</item>
+            <price>22.00</price>
+        </entree>
+        <entree>
+            <item>Full Leg</item>
+            <price>38.00</price>
+        </entree>
+    </section>
+    
+    <section name="Other Services">
+        <entree>
+            <item>Day/Evening Makeup</item>
+            <price>20.00</price>
+        </entree>
+        <entree>
+            <item>Special Occasion Makeup</item>
+            <price>38.00</price>
+        </entree>
+        <entree>
+            <item>Non-Medical Chemical Peel</item>
+            <price>45.00</price>
+        </entree>
+        <entree>
+            <item>Back Facial</item>
+            <price>40.00</price>
+        </entree>
+    </section>
   
 </salonmenu>
