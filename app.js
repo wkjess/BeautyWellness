@@ -11,6 +11,9 @@ var server = http.createServer(router); //This is where our server gets created
 
 router.use(express.static(path.resolve(__dirname,'views'))); //We serve static content from "views" folder
 
+router.use(express.urlencoded({extended: true})); //We allow the data sent from the client to be coming in as part of the URL in GET and POST requests
+router.use(express.json()); //We include support for JSON that is coming from the client
+
 // Function to read in XML file and convert it to JSON
 function xmlFileToJs(filename, cb) {
   var filepath = path.normalize(path.join(__dirname, filename));
@@ -47,12 +50,22 @@ router.get('/get/html', function(req, res) {
 
     var result = xsltProcess(doc, stylesheet); //This does our XSL Transformation
 
-    xmlFileToJs('BeautyWellness.xml', function(err, result) {
-        if (err) throw (err);
-        console.log(result);
-    });
-
     res.end(result.toString()); //Send the result back to the user, but convert to type string first
+
+});
+
+router.post('/post/json', function(req, res) {
+
+    function appendJSON(obj)
+        
+        xmlFileToJs('BeautyWellness.xml', function(err, result) {
+        if (err) throw (err);
+
+        result.salonmenu.section[obj.sec_n].entree.push({'item':obj.item, 'price': obj.price});
+
+        console.log(result);
+
+        });
 
 });
 
