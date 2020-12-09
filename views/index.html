@@ -12,6 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/BeautyWellness.css" rel="stylesheet">
 
 </head>
 
@@ -52,9 +53,9 @@
             <h1 class="mt-5">Welcome to BeautyWellness Salon</h1>
             <p class="lead">Please select your entrees from the menu below</p>
         </div>
-        <div id="results" class="col-lg-8 order-2"></div>
+        <div id="results" class="col-lg-8 order-2 mb-5"></div>
         <div class="col-lg-4 order-1">
-            <form>
+            <formenctype="application/json" action="/post/json" method="post">
                 <div class="form-group">
                     <select class="form-control" name="sec_n">
                         <option value="0">Facial Treatments</option>
@@ -62,8 +63,9 @@
                         <option value="2">Body Waxing</option>
                         <option value="3">Other Services</option>
                     </select>
-                    <input class="form-control mt-3" type="text" name="item" placeholder="item">
-                    <input class="form-control mt-3" type="text" name=
+                    <input class="form-control mt-3" type="text" name="item" placeholder="Item">
+                    <input class="form-control mt-3" type="text" name="price" placeholder="Price">
+                    <button type="submit" class="btn btn-primary btn-block mt-3">Submit</button>
                 </div>
             </form>
         </div>
