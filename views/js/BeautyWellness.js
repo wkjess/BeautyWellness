@@ -66,17 +66,3 @@ function getParentTag(oNode, sParentType) {
     return oParent;
 
 };
-
-window.addEventListener("load", function () {
-
-    document.forms[0].txtBillAmt.value = calculateBill('menuTable');
-    
-    document.querySelector("#calcBill").addEventListener("click", function () {
-        document.forms[0].txtBillAmt.value = calculateBill('menuTable');
-    });
-
-    document.querySelector("#showMale").addEventListener("click", function () {
-        highlightMale('menuTable', this.checked);
-    });
-    
-});
