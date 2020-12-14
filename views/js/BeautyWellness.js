@@ -31,11 +31,11 @@ function calculateBill(idMenuTable) {
     // return the price as a decimal number with 2 decimal places
     return Math.round(fBillTotal * 100.0) / 100.0;
 };
-// This function either turns on or off the row highlighting which 
-// treatment available for MALE (depending on the value of bShowMale)
+// This function either turns on or off the row highlighting for male
+// treatments available (depending on the value of bShowMale)
 function highlightMale(idTable, bShowMale) {
-    // if bShowMale is true, then we're highlighting the treatment selected
-    // , otherwise we're unhighlighting them.
+    // if bShowMale is true, then we're highlighting male
+    // treatment available, otherwise we're unhighlighting them.
     var i = 0;
     var oTable = document.getElementById(idTable);
     var oTBODY = oTable.getElementsByTagName('TBODY')[0];
@@ -66,3 +66,17 @@ function getParentTag(oNode, sParentType) {
     return oParent;
 
 };
+
+window.addEventListener("load", function () {
+
+    document.forms[0].txtBillAmt.value = calculateBill('menuTable');
+
+    document.querySelector("#calcBill").addEventListener("click", function () {
+        document.forms[0].txtBillAmt.value = calculateBill('menuTable');
+    });
+
+    document.querySelector("#showMale").addEventListener("click", function () {
+        highlightMale('menuTable', this.checked);
+    });
+    
+});
