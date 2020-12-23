@@ -73,7 +73,24 @@
                     <button type="submit" class="btn btn-primary btn-block mt-3">Submit</button>
                 </div>
             </form>
-        </div>
+            <button id="delete" class="btn btn-danger btn-block mt-3">Delete</button>
+            <p class="text-muted text-center">To delete an entree, click the required row first</p>
+            <form>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">&euro;</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Total" name="txtBillAmt">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <input type="checkbox" id="showMale" aria-label="Checkbox for following text input">
+                        </div>
+                    </div>
+                        <input class="btn btn-block btn-secondary mt-2" type="button" name="btnCalcBill"
+                            value="Calculate Bill" id="calcBill">
+                    </div>
+            </form>
+            </div>
     </div>
 </div>
     <footer class="footer">

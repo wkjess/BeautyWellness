@@ -107,6 +107,8 @@ router.post('/post/delete', function(req, res) {
   // Call appendJSON function and pass in body of the current POST request
   deleteJSON(req.body);
 
+  res.redirect('back');
+
 });
 
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function () {
