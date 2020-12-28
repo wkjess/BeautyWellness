@@ -96,11 +96,22 @@
     <footer class="footer">
         <div class="container text-center"><span class="text-muted">&copy; 2020</span></div>
     </footer>
-  <!-- Bootstrap core JavaScript -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/table.js"></script>
-
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/table.js"></script>
+    <script src="js/BeautyWelllness.js"></script>
+    <script>
+        window.addEventListener("load", function() {
+            document.forms[1].txtBillAmt.value = calculateBill('menuTable');
+            document.querySelector("#calcBill").addEventListener("click", function() {
+                document.forms[1].txtBillAmt.value = calculateBill('menuTable');
+            });
+            document.querySelector("#showMale").addEventListener("click", function() {
+                highlightMale('menuTable', this.checked);
+            });
+        });
+    </script>
 </body>
 
 </html>
