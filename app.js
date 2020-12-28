@@ -17,12 +17,9 @@ router.use(express.json()); //We include support for JSON that is coming from th
 function xmlFileToJs(filename, cb) {
 
     var filepath = path.normalize(path.join(__dirname, filename));
-
     fs.readFile(filepath, 'utf8', function (err, xmlStr) {
-    
         if (err) throw (err);
         xml2js.parseString(xmlStr, {}, cb);
-    
     });
 }
 
@@ -92,11 +89,17 @@ router.post('/post/delete', function(req, res) {
 
   // Function to read in a JSON file, add to it & convert to XML
   function deleteJSON(obj) {
+    
+    console.log(obj)
+
     // Function to read in XML file, convert it to JSON, delete the required object and write back to XML file
     xmlFileToJs('BeautyWellness.xml', function(err, result) {
       if (err) throw (err);
       //This is where we delete the object based on the position of the section and position of the entree, as being passed on from index.html
-      delete result.restaurantmenu.section[obj.section].entree[obj.entree];
+      delete result.salonmenu.section[obj.section].entree[obj.entree];
+      
+      console.log(JSON.stringify(result, null, "  "));
+      
       //This is where we convert from JSON and write back our XML file
       jsToXmlFile('BeautyWellness.xml', result, function(err) {
         if (err) console.log(err);
