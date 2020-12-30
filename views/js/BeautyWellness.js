@@ -1,19 +1,11 @@
-var gEntreeCount = 0;
 // returns a number that represents the sum of all the selected menu
 // item prices.
 function calculateBill(idMenuTable) {
 
     var fBillTotal = 0.0;
     var i = 0;
-
-    // find the table tag
-    var oTable = document.getElementById(idMenuTable);
-    // go through the table and add up the prices of all
-    // the selected items. The code takes advantage of the 
-    // fact that each checkbox has a corresponding row in
-    // the table, and the only INPUT tags are the checkboxes.
-    var aCBTags = oTable.getElementsByTagName('INPUT');
-
+    var aCBTags = document.querySelectorAll('input');
+    
     for (i = 0; i < aCBTags.length; i++) {
 
         // is this menu item selected? it is if the checkbox is checked
@@ -38,14 +30,14 @@ function highlightMale(idTable, bShowMale) {
     // treatment available, otherwise we're unhighlighting them.
     var i = 0;
     var oTable = document.getElementById(idTable);
-    var oTBODY = oTable.getElementsByTagName('TBODY')[0];
-    var aTRs = oTBODY.getElementsByTagName('TR');
+    var oTBODY = oTable.getElementsByTagName('tbody')[0];
+    var aTRs = oTBODY.getElementsByTagName('tr');
     // walk through each of the table rows and see if it has a 
     // "male" attribute on it.
     for (i = 0; i < aTRs.length; i++) {
-        if (aTRs[i].getAttribute('male') && aTRs[i].getAttribute('male') == "true") {
+        if (aTRs[i].getAttribute('male') == "true") {
             if (bShowMale) {
-                aTRs[i].style.backgroundColor = "lightGreen";
+                aTRs[i].style.backgroundColor = "lightpink";
             } else {
                 aTRs[i].style.backgroundColor = "";
             };
@@ -66,17 +58,3 @@ function getParentTag(oNode, sParentType) {
     return oParent;
 
 };
-
-window.addEventListener("load", function () {
-
-    document.forms[0].txtBillAmt.value = calculateBill('menuTable');
-
-    document.querySelector("#calcBill").addEventListener("click", function () {
-        document.forms[0].txtBillAmt.value = calculateBill('menuTable');
-    });
-
-    document.querySelector("#showMale").addEventListener("click", function () {
-        highlightMale('menuTable', this.checked);
-    });
-    
-});
